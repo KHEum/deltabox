@@ -7,33 +7,15 @@
 # HOUSING_PATH = os.path.join("datasets", "housing") 
 # HOUSING_URL = DOWNLOAD_ROOT + "datasets/housing/housing.tgz"
 
-# def fetch_housing_data(housing_url=HOUSING_URL, housing_path=HOUSING_PATH):
-#     if not os.path.isdir(housing_path):
-#         os.makedirs(housing_path)
-#     tgz_path = os.path.join(housing_path, "housing.tgz")    
-#     urllib.request.urlretrieve(housing_url, tgz_path)    
-#     housing_tgz = tarfile.open(tgz_path)    
-#     housing_tgz.extractall(path=housing_path)    
-#     housing_tgz.close()
-
-# def load_housing_data(housing_path=HOUSING_PATH):
-#     csv_path = os.path.join(housing_path, "housing.csv")
-#     return pd.read_csv(csv_path) 
-
-
-# housing = load_housing_data()
-# housing.head()
-
-
 import pandas as pd
 import numpy as np
 # import matplotlib.pyplot as plt
-import tuna as tn
+from tuna import split_train_test
 
 csv_path = 'C:/Users/BEAR/Documents/GitHub/python_practice/HandsOnML/RawData/housing.csv'
 housing = pd.read_csv(csv_path)
 
-# print(housing.head)
+print(housing.head)
 # print(housing['ocean_proximity'].value_counts())
 # print(housing.describe())
 
@@ -54,10 +36,13 @@ train_set, test_set = split_train_test(housing, 0.2)
 
 print(len(train_set), "tranin + ", len(test_set), "test")
 
-tuna.fish()
-
+# tuna.fish()
+# 
 # def fish():
 #     print("I am Happy tuna")
 
 # fish()
+
+
+
 
