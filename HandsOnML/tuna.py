@@ -11,4 +11,3 @@ def split_train_test(data, test_ratio):
 
 def fish():
     print("I am Happy tuna")
-    KeyboardInterrupth

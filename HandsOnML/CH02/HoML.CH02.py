@@ -1,8 +1,9 @@
-# import six.moves import urllib
-from tuna import fish
+import tuna
 
-# DOWNLOAD_ROOT = "https://raw.githubusercontent.com/ageron/handson-ml2/master/"
-# HOUSING_PATH = os.path.join("datasets", "housing")
-# HOUSING_URL = DOWNLOAD_ROOT + "datasets/housing/housing.tgz"
+csv_path = 'C:/Users/BEAR/Documents/GitHub/python_practice/HandsOnML/RawData/housing.csv'
+housing = pd.read_csv(csv_path)
 
-fish()
+housing.head()
+housing.info()
+
+# print("aaaa")
